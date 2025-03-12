@@ -20,7 +20,11 @@ namespace AdvancedAvatarControl
         public override void OnInitializeMelon()
         {
             Prefs.Initialize();
-            ModuleHandler.LoadModule(Assembly.GetExecutingAssembly());
+            if (FindMelon("LabFusion", "Lakatrazz") != null) LoadModule();
+        }
+        private static void LoadModule()
+        {
+            LabFusion.SDK.Modules.ModuleManager.RegisterModule<FusionModule>();
         }
 
         public override void OnLateInitializeMelon()

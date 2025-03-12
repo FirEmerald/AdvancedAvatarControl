@@ -7,6 +7,7 @@ using LabFusion.Entities;
 using LabFusion.Network;
 using LabFusion.Player;
 using LabFusion.Representation;
+using LabFusion.SDK.Modules;
 using UnityEngine;
 
 namespace AdvancedAvatarControl.Messages

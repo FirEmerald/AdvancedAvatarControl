@@ -139,7 +139,7 @@ namespace AdvancedAvatarControl.BoneMenu
                     FloatElement floatElement = blendShapes.CreateFloat(blendShapeName, Color.white, weight, 10,
                         0, 100, (float value) =>
                         {
-                            if (NetworkInfo.HasServer)
+                            if (NetworkInfo.HasServer && FusionModule.Instance != null)
                             {
                                 FusionModule.Instance.SendBlendShapeMessage(value, i);
                             }
